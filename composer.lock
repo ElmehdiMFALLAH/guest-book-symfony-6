@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13661c540bdfdd09d308f1078e9e831a",
+    "content-hash": "af5f334ba43982249810d629433006d3",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -184,6 +184,97 @@
                 }
             ],
             "time": "2023-10-03T09:22:33+00:00"
+        },
+        {
+            "name": "doctrine/common",
+            "version": "3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/common.git",
+                "reference": "8b5e5650391f851ed58910b3e3d48a71062eeced"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/8b5e5650391f851ed58910b3e3d48a71062eeced",
+                "reference": "8b5e5650391f851ed58910b3e3d48a71062eeced",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/persistence": "^2.0 || ^3.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9.0 || ^10.0",
+                "doctrine/collections": "^1",
+                "phpstan/phpstan": "^1.4.1",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpunit/phpunit": "^7.5.20 || ^8.5 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "symfony/phpunit-bridge": "^6.1",
+                "vimeo/psalm": "^4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, proxies and much more.",
+            "homepage": "https://www.doctrine-project.org/projects/common.html",
+            "keywords": [
+                "common",
+                "doctrine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/common/issues",
+                "source": "https://github.com/doctrine/common/tree/3.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-09T11:47:59+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -988,48 +1079,61 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "3.0.0",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "5b8b5f28f535e1f03b54dcfb0427407ed92f5b72"
+                "reference": "f2176a9ce56cafdfd1624d54bfdb076819083d5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/5b8b5f28f535e1f03b54dcfb0427407ed92f5b72",
-                "reference": "5b8b5f28f535e1f03b54dcfb0427407ed92f5b72",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/f2176a9ce56cafdfd1624d54bfdb076819083d5b",
+                "reference": "f2176a9ce56cafdfd1624d54bfdb076819083d5b",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2",
-                "doctrine/collections": "^2.1",
-                "doctrine/dbal": "^3.6 || ^4",
+                "doctrine/cache": "^1.12.1 || ^2.1.1",
+                "doctrine/collections": "^1.5 || ^2.1",
+                "doctrine/common": "^3.0.3",
+                "doctrine/dbal": "^2.13.1 || ^3.2",
                 "doctrine/deprecations": "^0.5.3 || ^1",
                 "doctrine/event-manager": "^1.2 || ^2",
                 "doctrine/inflector": "^1.4 || ^2.0",
                 "doctrine/instantiator": "^1.3 || ^2",
-                "doctrine/lexer": "^3",
-                "doctrine/persistence": "^3.1.1",
+                "doctrine/lexer": "^2 || ^3",
+                "doctrine/persistence": "^2.4 || ^3",
                 "ext-ctype": "*",
-                "php": "^8.1",
+                "php": "^7.1 || ^8.0",
                 "psr/cache": "^1 || ^2 || ^3",
-                "symfony/console": "^5.4 || ^6.0 || ^7.0",
-                "symfony/var-exporter": "~6.2.13 || ^6.3.2 || ^7.0"
+                "symfony/console": "^4.2 || ^5.0 || ^6.0 || ^7.0",
+                "symfony/polyfill-php72": "^1.23",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "conflict": {
+                "doctrine/annotations": "<1.13 || >= 3.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^12.0",
-                "phpbench/phpbench": "^1.0",
-                "phpstan/phpstan": "1.10.35",
-                "phpunit/phpunit": "^10.4.0",
+                "doctrine/annotations": "^1.13 || ^2",
+                "doctrine/coding-standard": "^9.0.2 || ^12.0",
+                "phpbench/phpbench": "^0.16.10 || ^1.0",
+                "phpstan/phpstan": "~1.4.10 || 1.10.35",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6",
                 "psr/log": "^1 || ^2 || ^3",
                 "squizlabs/php_codesniffer": "3.7.2",
-                "symfony/cache": "^5.4 || ^6.2 || ^7.0",
-                "vimeo/psalm": "5.16.0"
+                "symfony/cache": "^4.4 || ^5.4 || ^6.4 || ^7.0",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6.2 || ^7.0",
+                "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0 || ^7.0",
+                "vimeo/psalm": "4.30.0 || 5.16.0"
             },
             "suggest": {
                 "ext-dom": "Provides support for XSD validation for XML mapping files",
-                "symfony/cache": "Provides cache support for Setup Tool with doctrine/cache 2.0"
+                "symfony/cache": "Provides cache support for Setup Tool with doctrine/cache 2.0",
+                "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
+            "bin": [
+                "bin/doctrine"
+            ],
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1070,9 +1174,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/3.0.0"
+                "source": "https://github.com/doctrine/orm/tree/2.18.0"
             },
-            "time": "2024-02-03T16:50:09+00:00"
+            "time": "2024-01-31T15:53:12+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -1223,6 +1327,101 @@
                 "source": "https://github.com/doctrine/sql-formatter/tree/1.1.3"
             },
             "time": "2022-05-23T21:33:49+00:00"
+        },
+        {
+            "name": "easycorp/easyadmin-bundle",
+            "version": "v4.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
+                "reference": "085b66eb2104717302c88d1b0d5c886492335e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/085b66eb2104717302c88d1b0d5c886492335e3c",
+                "reference": "085b66eb2104717302c88d1b0d5c886492335e3c",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^2.5",
+                "doctrine/orm": "^2.10|^3.0",
+                "ext-json": "*",
+                "php": ">=8.0.2",
+                "symfony/asset": "^5.4|^6.0|^7.0",
+                "symfony/cache": "^5.4|^6.0|^7.0",
+                "symfony/config": "^5.4|^6.0|^7.0",
+                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
+                "symfony/deprecation-contracts": "^3.0",
+                "symfony/doctrine-bridge": "^5.4|^6.0|^7.0",
+                "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
+                "symfony/filesystem": "^5.4|^6.0|^7.0",
+                "symfony/form": "^5.4|^6.0|^7.0",
+                "symfony/framework-bundle": "^5.4|^6.0|^7.0",
+                "symfony/http-foundation": "^5.4|^6.0|^7.0",
+                "symfony/http-kernel": "^5.4|^6.0|^7.0",
+                "symfony/intl": "^5.4|^6.0|^7.0",
+                "symfony/property-access": "^5.4|^6.0|^7.0",
+                "symfony/security-bundle": "^5.4|^6.0|^7.0",
+                "symfony/string": "^5.4|^6.0|^7.0",
+                "symfony/translation": "^5.4|^6.0|^7.0",
+                "symfony/twig-bundle": "^5.4|^6.0|^7.0",
+                "symfony/uid": "^5.4|^6.0|^7.0",
+                "symfony/validator": "^5.4|^6.0|^7.0"
+            },
+            "require-dev": {
+                "doctrine/doctrine-fixtures-bundle": "^3.4|3.5.x-dev",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan-phpunit": "^1.2",
+                "phpstan/phpstan-strict-rules": "^1.4",
+                "phpstan/phpstan-symfony": "^1.2",
+                "psr/log": "^1.0",
+                "symfony/browser-kit": "^5.4|^6.0|^7.0",
+                "symfony/css-selector": "^5.4|^6.0|^7.0",
+                "symfony/debug-bundle": "^5.4|^6.0|^7.0",
+                "symfony/dom-crawler": "^5.4|^6.0|^7.0",
+                "symfony/expression-language": "^5.4|^6.0|^7.0",
+                "symfony/phpunit-bridge": "^5.4|^6.0|^7.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EasyCorp\\Bundle\\EasyAdminBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Project Contributors",
+                    "homepage": "https://github.com/EasyCorp/EasyAdminBundle/graphs/contributors"
+                }
+            ],
+            "description": "Admin generator for Symfony applications",
+            "homepage": "https://github.com/EasyCorp/EasyAdminBundle",
+            "keywords": [
+                "admin",
+                "backend",
+                "generator"
+            ],
+            "support": {
+                "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.9.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/javiereguiluz",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-02-09T19:44:38+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -4981,6 +5180,85 @@
             "time": "2024-01-29T20:11:03+00:00"
         },
         {
+            "name": "symfony/polyfill-uuid",
+            "version": "v1.29.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-uuid.git",
+                "reference": "3abdd21b0ceaa3000ee950097bc3cf9efc137853"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-uuid/zipball/3abdd21b0ceaa3000ee950097bc3cf9efc137853",
+                "reference": "3abdd21b0ceaa3000ee950097bc3cf9efc137853",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "provide": {
+                "ext-uuid": "*"
+            },
+            "suggest": {
+                "ext-uuid": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Uuid\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for uuid functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "uuid"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-uuid/tree/v1.29.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-01-29T20:11:03+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v6.2.13",
             "source": {
@@ -6492,6 +6770,80 @@
             "homepage": "https://symfony.com",
             "support": {
                 "source": "https://github.com/symfony/twig-bundle/tree/v6.2.7"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-02-14T08:44:56+00:00"
+        },
+        {
+            "name": "symfony/uid",
+            "version": "v6.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/uid.git",
+                "reference": "d30c72a63897cfa043e1de4d4dd2ffa9ecefcdc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/uid/zipball/d30c72a63897cfa043e1de4d4dd2ffa9ecefcdc0",
+                "reference": "d30c72a63897cfa043e1de4d4dd2ffa9ecefcdc0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/polyfill-uuid": "^1.15"
+            },
+            "require-dev": {
+                "symfony/console": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Uid\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to generate and represent UIDs",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "UID",
+                "ulid",
+                "uuid"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/uid/tree/v6.2.7"
             },
             "funding": [
                 {
